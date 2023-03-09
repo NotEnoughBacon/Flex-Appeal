@@ -1,0 +1,30 @@
+{
+  "name": "flex-appeal",
+  "version": "1.0.0",
+  "description": "Fitness and workout tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotEnoughBacon/Flex-Appeal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotEnoughBacon/Flex-Appeal/issues"
+  },
+  "homepage": "https://github.com/NotEnoughBacon/Flex-Appeal#readme",
+  "dependencies": {
+    "chart.js": "^4.2.1",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.1",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.29.1",
+    "uuid": "^9.0.0"
+  }
+}
