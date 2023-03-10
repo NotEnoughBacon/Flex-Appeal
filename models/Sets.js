@@ -16,6 +16,13 @@ Sets.init(
             allowNull: false,
         },
     },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'sets',
+    }
 );
 
 module.exports = Sets;
