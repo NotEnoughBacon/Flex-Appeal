@@ -90,25 +90,3 @@ Sets.belongsToMany(Movements, {
 });
 
 module.exports = { Movements, Premade, Custom, Users, Reps, Sets };
-
-
-
-
-
-
-
-
-
-
-
-// Users.belongsToMany(Custom, {
-
-//     foreignKey: 'user_id',
-// });
-
-// Custom.hasOne(Users, {
-
-//     foreignKey: 'user_id',
-// });
-
-
