@@ -7,11 +7,12 @@ const { DataTypes } = require('sequelize/types');
 
 // Creates a new sequalize model for Users
 class User extends Model {
-// checkPassword(loginPw){
-//     return bcrypt.compareSync(loginPw, this.password);
+checkPassword(loginPw){
+return bcrypt.compareSync(loginPw, this.password);
+    }
 }
 
-
+// user attributes that are added to db
 User.init(
     {
         id:{
@@ -41,7 +42,7 @@ User.init(
             },
         },
     },
-    {
+    {       // add psw hashing before adding to db
         hooks: {
             beforeCreate: async (newUserData) => {
                 newUserData.password = await bcrypt.hash
