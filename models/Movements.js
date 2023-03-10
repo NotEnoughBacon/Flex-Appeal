@@ -19,20 +19,20 @@ Movements.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        sets: {
+        premade_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'sets',
+                model: 'premade',
                 key: 'id'
             }
         },
-        reps: {
+        custom_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'reps',
+                model: 'custom',
                 key: 'id'
             }
-        }
+        },
     },
     {
         sequelize,
