@@ -168,14 +168,53 @@ h3 {
 }
 
 .right-main {
+    /* background-color: whitesmoke; */
+    border-radius: 25px;
+    border-width: 1px;
+    box-shadow: 0px 5px 10px 0px black;
+    font-size: 20px;
+    margin: 20px auto;
+    height: 90%;
+    width: 30%;
+    max-width: 30%;
+}
+
+.saved-user-workout {
     background-color: whitesmoke;
     border-radius: 25px;
     border-width: 1px;
     box-shadow: 0px 5px 10px 0px black;
     font-size: 20px;
     margin: 20px auto;
-    width: 30%;
-    max-width: 30%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.random-workout {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border-width: 1px;
+    box-shadow: 0px 5px 10px 0px black;
+    font-size: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.random-btn {
+    border: solid;
+    border-width: 1px;
+    background-color: #DE7954;
+    border-radius: 25px;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
 }
 
 /* .opaque {
