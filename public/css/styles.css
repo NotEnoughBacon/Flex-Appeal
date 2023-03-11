@@ -34,7 +34,8 @@ body {
 h1 {
     text-align: left;
     margin-right: 15%;
-    background-color: #DE7954;
+    /* background-color: #DE7954; */
+    background: linear-gradient(180deg, #DE7954, #80400b);
     clip-path: polygon(0% 0%, 100% 0%, 85% 120%, 0% 100%);
     border-radius: 10px;
     border-width: 1px;
@@ -117,7 +118,8 @@ h3 {
 .add-btn {
     border: solid;
     border-width: 1px;
-    background-color: #DE7954;
+    /* background-color: #DE7954; */
+    background: linear-gradient(180deg, #DE7954, #80400b);
     border-radius: 25px;
     color: white;
     display: inline-block;
@@ -187,7 +189,8 @@ h3 {
 .random-btn {
     border: solid;
     border-width: 1px;
-    background-color: #DE7954;
+    /* background-color: #DE7954; */
+    background: linear-gradient(180deg, #DE7954, #80400b);
     border-radius: 25px;
     color: white;
     display: inline-block;
@@ -217,7 +220,7 @@ h3 {
     font-size: 20px;
     margin: 20px auto;
     height: 90%;
-    width: 40%;
+    width: 100%;
 }
 
 .fa {
@@ -243,13 +246,13 @@ h3 {
 
 /* instagram */
 .fa-instagram {
-    background: #3B5998;
+    background: linear-gradient(360deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     color: white;
   }
   
 /* Reddit */
 .fa-reddit {
-    background: #55ACEE;
+    background: #ff4500;
     color: white;
 }
 
