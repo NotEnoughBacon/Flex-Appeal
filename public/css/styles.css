@@ -18,21 +18,48 @@ body {
 }
 
 .left-main {
-    background-color: whitesmoke;
+    /* background-color: #CCF5E2; */
+    /* background-color: rgba(204,245,226,.75); */
+    background-color: rgba(71,133,194,.60);
+    /* background-color: rgba(9,188,215,.75); */
+    /* background-color: rgba(222,121,84,.75); */
     border-radius: 25px;
     border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
+    /* box-shadow: 0px 5px 10px 0px black; */
     font-size: 20px;
     margin: 20px auto;
     height: 90%;
     width: 60%;
+    /* opacity: 0.5; */
+}
+
+h1 {
+    text-align: left;
+    margin-right: 15%;
+    background-color: #DE7954;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 120%, 0% 100%);
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: 0px 5px 10px 0px black;
+    opacity: 1.0;
+    color: white;
+    padding-left: 5%;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    font-size: 110%;
+    color: white;
 }
 
 .left-title {
-    background-color: whitesmoke;
+    /* background-color: whitesmoke;
     border-radius: 25px;
     border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
+    box-shadow: 0px 5px 10px 0px black; */
     font-size: 20px;
     margin: 20px auto;
     width: 40%;
@@ -43,6 +70,7 @@ body {
     margin: 0 auto;
     width: 70%;
     height: 100%;
+    color: white;
 }
 
 .workout-entry {
@@ -51,6 +79,7 @@ body {
     width: 70%;
     height: 100%;
     display: inline-flex;
+    color: white;
 }
 
 .workout-entry-left {
@@ -91,8 +120,9 @@ body {
 }
 
 .add-btn {
-    border: none;
-    background-color: hsl(229,100%, 59%);
+    border: solid;
+    border-width: 1px;
+    background-color: #DE7954;
     border-radius: 25px;
     color: white;
     display: inline-block;
@@ -147,6 +177,10 @@ body {
     width: 30%;
     max-width: 30%;
 }
+
+/* .opaque {
+    opacity: 1.0;
+} */
 
 @media (max-width: 690px) {
     .btn {

@@ -23,29 +23,29 @@
 
 <body>
     <div id="master-container" class="master-container">
-        <div class="left-main">
-            <h1>Welcome back {{first-name}}</h1>
+        <div class="left-main transparent">
+            <h1 class="opaque">Welcome back {{first-name}}</h1>
             <div class="left-title">
-                <h2>Build your workout</h2>
+                <h2 class="opaque">Build your workout</h2>
             </div>
-            <div class="workout-plan-entry">
+            <div class="workout-plan-entry opaque">
                 <label for="user-list-title">Name: </label>
                 <input type="text" id="user-list-title"><br>
                 <label for="user-list-desc">Description: </label>
                 <input type="text" id="user-list-desc"><br>
             </div>
-            <div class="workout-entry">
+            <div class="workout-entry opaque">
                 <div class="workout-entry-left">
                     <label for="workout-name">Movement: </label>
                     <input type="text" id="workout-name" class="workout-input"><br>
                     <input type="text" id="workout-sets" class="workout-input"><br>
                     <input type="text" id="workout-reps" class="workout-input"><br>
                 </div>
-                <div class="workout-entry-right">
+                <div class="workout-entry-right opaque">
                     <button id="add-button" type="submit" class="add-btn">Add Exercise</button>
                 </div>
             </div>
-            <div class="saved-workouts">
+            <div class="saved-workouts opaque">
                 <div class="saved-workouts-left">
                     <h3>Workout Plan: </h3>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="saved-5 saved">Placeholder</div>
                 </div>
             </div>
-            <div class="left-main-submit">
+            <div class="left-main-submit opaque">
                 <button id="add-button" type="submit" class="add-btn">Add Workout</button>
             </div>
         </div>
