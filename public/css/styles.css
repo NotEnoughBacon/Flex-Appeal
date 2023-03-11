@@ -198,6 +198,7 @@ h3 {
     cursor: pointer;
     height: 80%;
     width: 80%;
+    margin: 1%;
 }
 
 .user-workouts {
