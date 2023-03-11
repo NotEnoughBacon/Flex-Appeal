@@ -18,19 +18,17 @@ body {
 }
 
 .left-main {
-    /* background-color: #CCF5E2; */
     /* background-color: rgba(204,245,226,.75); */
     background-color: rgba(71,133,194,.60);
     /* background-color: rgba(9,188,215,.75); */
     /* background-color: rgba(222,121,84,.75); */
     border-radius: 25px;
     border-width: 1px;
-    /* box-shadow: 0px 5px 10px 0px black; */
     font-size: 20px;
     margin: 20px auto;
     height: 90%;
     width: 60%;
-    /* opacity: 0.5; */
+    margin-top: 5.5%;
 }
 
 h1 {
@@ -48,6 +46,7 @@ h1 {
 
 h2 {
     color: white;
+    margin-top: 10%;
 }
 
 h3 {
@@ -56,10 +55,6 @@ h3 {
 }
 
 .left-title {
-    /* background-color: whitesmoke;
-    border-radius: 25px;
-    border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black; */
     font-size: 20px;
     margin: 20px auto;
     width: 40%;
@@ -168,10 +163,6 @@ h3 {
 }
 
 .right-main {
-    /* background-color: whitesmoke; */
-    border-radius: 25px;
-    border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
     font-size: 20px;
     margin: 20px auto;
     height: 90%;
@@ -179,19 +170,11 @@ h3 {
     max-width: 30%;
 }
 
-.saved-user-workout {
-    background-color: whitesmoke;
-    border-radius: 25px;
-    border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
-    font-size: 20px;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 100%;
-}
-
 .random-workout {
-    background-color: whitesmoke;
+    /* background-color: rgba(204,245,226,.75); */
+    background-color: rgba(71,133,194,.60);
+    /* background-color: rgba(9,188,215,.75); */
+    /* background-color: rgba(222,121,84,.75); */    
     border-radius: 25px;
     border-width: 1px;
     box-shadow: 0px 5px 10px 0px black;
@@ -217,9 +200,57 @@ h3 {
     width: 80%;
 }
 
-/* .opaque {
-    opacity: 1.0;
-} */
+.user-workouts {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border-width: 1px;
+    box-shadow: 0px 5px 10px 0px black;
+    font-size: 20px;
+    margin: 20px auto;
+    height: 90%;
+    width: 85%;
+    display: inline-block;
+}
+
+.socials {
+    font-size: 20px;
+    margin: 20px auto;
+    height: 90%;
+    width: 40%;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 5%;
+  }
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* instagram */
+.fa-instagram {
+    background: #3B5998;
+    color: white;
+  }
+  
+/* Reddit */
+.fa-reddit {
+    background: #55ACEE;
+    color: white;
+}
 
 @media (max-width: 690px) {
     .btn {
