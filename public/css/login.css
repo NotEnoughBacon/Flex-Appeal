@@ -6,8 +6,9 @@
 }
 
 .login-box {
-    background-color: rgba(71,133,194,.80);
-    background-color: rgba(255,255,255,.80);
+    /* background-color: rgba(71,133,194,.80); */
+    /* background-color: rgba(255,255,255,.80); */
+    background-color: rgb(255,255,255);
     border-radius: 25px;
     border-width: 1px;
     text-align: center;
@@ -41,7 +42,8 @@
 }
 
 .input-field {
-    background: #ccf5e2;
+    /* background: #ccf5e2; */
+    background: #eaeaea;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -59,4 +61,8 @@ input {
 .input-field i {
     margin-left: 15px;
     color: #999;
+}
+
+p {
+    color: #4785c2;
 }
