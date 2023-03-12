@@ -28,7 +28,7 @@ body {
     margin: 20px auto;
     height: 90%;
     width: 60%;
-    margin-top: 5.5%;
+    margin-top: 6%;
 }
 
 h1 {
@@ -43,16 +43,20 @@ h1 {
     opacity: 1.0;
     color: white;
     padding-left: 5%;
+    font-weight: lighter;
 }
 
 h2 {
     color: white;
     margin-top: 10%;
+    font-weight: lighter;
+    padding-top: 5%;
 }
 
 h3 {
     font-size: 110%;
     color: white;
+    font-weight: lighter;
 }
 
 .left-title {
@@ -67,6 +71,7 @@ h3 {
     width: 70%;
     height: 100%;
     color: white;
+    font-weight: lighter;
 }
 
 .workout-entry {
@@ -76,6 +81,7 @@ h3 {
     height: 100%;
     display: inline-flex;
     color: white;
+    font-weight: lighter;
 }
 
 .workout-entry-left {
@@ -129,6 +135,7 @@ h3 {
     text-align: center;
     cursor: pointer;
     height: 80%;
+    font-weight: lighter;
 }
 
 .saved-workouts {
@@ -202,6 +209,7 @@ h3 {
     height: 80%;
     width: 80%;
     margin: 1%;
+    font-weight: lighter;
 }
 
 .user-workouts {
