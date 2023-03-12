@@ -41,6 +41,10 @@
     transform: translateX(-50%);
 }
 
+.input-group {
+    height: 250px;
+}
+
 .input-field {
     /* background: #ccf5e2; */
     background: #eaeaea;
@@ -51,7 +55,7 @@
 }
 
 input {
-    width: 80%;
+    width: 100%;
     background: transparent;
     border: 0;
     outline: 0;
@@ -64,5 +68,36 @@ input {
 }
 
 p {
+    text-align: left;
+    font-size: 13px;
     color: #4785c2;
+    margin-left: 14px;
+}
+
+p a {
+    text-decoration: none;
+    color: #4785c2;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button {
+    flex-basis: 48%;
+    background: #4785c2;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline; 0;
+    cursor: pointer;
+    /* transition: background 1s; */
+}
+
+.btn-field button.disable {
+    background: #eaeaea;
+    color: #555;
 }
