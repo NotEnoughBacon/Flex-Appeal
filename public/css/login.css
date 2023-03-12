@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.login-box {
+    background-color: rgba(71,133,194,.80);
+    border-radius: 25px;
+    border-width: 1px;
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 60px 70px;
+    color: white;
+}
