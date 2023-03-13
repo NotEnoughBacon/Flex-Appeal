@@ -18,21 +18,48 @@ body {
 }
 
 .left-main {
-    background-color: whitesmoke;
+    /* background-color: rgba(204,245,226,.75); */
+    background-color: rgba(71,133,194,.60);
+    /* background-color: rgba(9,188,215,.75); */
+    /* background-color: rgba(222,121,84,.75); */
     border-radius: 25px;
     border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
     font-size: 20px;
     margin: 20px auto;
     height: 90%;
     width: 60%;
+    margin-top: 6%;
+}
+
+h1 {
+    text-align: left;
+    margin-right: 15%;
+    /* background-color: #DE7954; */
+    background: linear-gradient(180deg, #DE7954, #80400b);
+    clip-path: polygon(0% 0%, 100% 0%, 85% 120%, 0% 100%);
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: 0px 5px 10px 0px black;
+    opacity: 1.0;
+    color: white;
+    padding-left: 5%;
+    font-weight: lighter;
+}
+
+h2 {
+    color: white;
+    margin-top: 10%;
+    font-weight: lighter;
+    padding-top: 5%;
+}
+
+h3 {
+    font-size: 110%;
+    color: white;
+    font-weight: lighter;
 }
 
 .left-title {
-    background-color: whitesmoke;
-    border-radius: 25px;
-    border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
     font-size: 20px;
     margin: 20px auto;
     width: 40%;
@@ -43,6 +70,8 @@ body {
     margin: 0 auto;
     width: 70%;
     height: 100%;
+    color: white;
+    font-weight: lighter;
 }
 
 .workout-entry {
@@ -51,6 +80,8 @@ body {
     width: 70%;
     height: 100%;
     display: inline-flex;
+    color: white;
+    font-weight: lighter;
 }
 
 .workout-entry-left {
@@ -91,8 +122,10 @@ body {
 }
 
 .add-btn {
-    border: none;
-    background-color: hsl(229,100%, 59%);
+    border: solid;
+    border-width: 1px;
+    /* background-color: #DE7954; */
+    background: linear-gradient(180deg, #DE7954, #80400b);
     border-radius: 25px;
     color: white;
     display: inline-block;
@@ -102,6 +135,7 @@ body {
     text-align: center;
     cursor: pointer;
     height: 80%;
+    font-weight: lighter;
 }
 
 .saved-workouts {
@@ -138,14 +172,96 @@ body {
 }
 
 .right-main {
+    font-size: 20px;
+    margin: 20px auto;
+    height: 90%;
+    width: 30%;
+    max-width: 30%;
+}
+
+.random-workout {
+    /* background-color: rgba(204,245,226,.75); */
+    background-color: rgba(71,133,194,.60);
+    /* background-color: rgba(9,188,215,.75); */
+    /* background-color: rgba(222,121,84,.75); */    
+    border-radius: 25px;
+    border-width: 1px;
+    box-shadow: 0px 5px 10px 0px black;
+    font-size: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.random-btn {
+    border: solid;
+    border-width: 1px;
+    /* background-color: #DE7954; */
+    background: linear-gradient(180deg, #DE7954, #80400b);
+    border-radius: 25px;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 80%;
+    width: 80%;
+    margin: 1%;
+    font-weight: lighter;
+}
+
+.user-workouts {
     background-color: whitesmoke;
     border-radius: 25px;
     border-width: 1px;
     box-shadow: 0px 5px 10px 0px black;
     font-size: 20px;
     margin: 20px auto;
-    width: 30%;
-    max-width: 30%;
+    height: 90%;
+    width: 85%;
+    display: inline-block;
+}
+
+.socials {
+    font-size: 20px;
+    margin: 20px auto;
+    height: 90%;
+    width: 100%;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 5%;
+  }
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* instagram */
+.fa-instagram {
+    background: linear-gradient(360deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: white;
+  }
+  
+/* Reddit */
+.fa-reddit {
+    background: #ff4500;
+    color: white;
 }
 
 @media (max-width: 690px) {

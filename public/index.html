@@ -11,9 +11,12 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         body {
-        background-image: url("media/FlexAppeal_Main.jpg");
+        /* background-image: url("media/FlexAppeal_Main.jpg"); */
+        background-image: url("media/FlexAppeal-Weights.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -23,29 +26,32 @@
 
 <body>
     <div id="master-container" class="master-container">
-        <div class="left-main">
-            <h1>Welcome back {{first-name}}</h1>
+        <!-- left-side master container -->
+        <div class="left-main transparent">
+            <!-- Use handlebars to auto-populate this with user first name -->
+            <h1 class="opaque">Welcome back {{first-name}}</h1>
             <div class="left-title">
-                <h2>Build your workout</h2>
+                <h2 class="opaque">Build your workout</h2>
             </div>
-            <div class="workout-plan-entry">
+            <div class="workout-plan-entry opaque">
                 <label for="user-list-title">Name: </label>
                 <input type="text" id="user-list-title"><br>
                 <label for="user-list-desc">Description: </label>
                 <input type="text" id="user-list-desc"><br>
             </div>
-            <div class="workout-entry">
+            <div class="workout-entry opaque">
                 <div class="workout-entry-left">
                     <label for="workout-name">Movement: </label>
                     <input type="text" id="workout-name" class="workout-input"><br>
                     <input type="text" id="workout-sets" class="workout-input"><br>
                     <input type="text" id="workout-reps" class="workout-input"><br>
                 </div>
-                <div class="workout-entry-right">
+                <!-- Button to add user-entry for exercise to the "workout plan" in HTML -->
+                <div class="workout-entry-right opaque">
                     <button id="add-button" type="submit" class="add-btn">Add Exercise</button>
                 </div>
             </div>
-            <div class="saved-workouts">
+            <div class="saved-workouts opaque">
                 <div class="saved-workouts-left">
                     <h3>Workout Plan: </h3>
                 </div>
@@ -57,12 +63,41 @@
                     <div class="saved-5 saved">Placeholder</div>
                 </div>
             </div>
-            <div class="left-main-submit">
+            <!-- Button to save workout list to user DB -->
+            <div class="left-main-submit opaque">
                 <button id="add-button" type="submit" class="add-btn">Add Workout</button>
             </div>
         </div>
+        <!-- Right-side master container -->
         <div class="right-main">
-            <h2>TEST</h2>
+            <!-- Div that will house user's saved workouts -->
+            <div class="random-workout">
+            <h2>Your Workouts</h2>
+                <div class="user-workouts">
+                    <div class="saved-1 saved">Placeholder</div>
+                    <div class="saved-2 saved">Placeholder</div>
+                    <div class="saved-3 saved">Placeholder</div>
+                    <div class="saved-4 saved">Placeholder</div>
+                    <div class="saved-5 saved">Placeholder</div>
+                </div>
+            </div>
+            <!-- Gives user Push, Pull, and leg search options for random exercises -->
+            <div class="random-workout">
+                <h2>Random Workout</h2>
+                <button id="push-workout" type="submit" class="random-btn">Push Workout</button>
+                <button id="pull-workout" type="submit" class="random-btn">Pull Workout</button>
+                <button id="leg-workout" type="submit" class="random-btn">Leg Workout</button>
+            </div>
+            <!-- Houses social media buttons -->
+            <div class="random-workout">
+                <h2>Let's Share!</h2>
+                <div class="socials">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-reddit"></a>
+                </div>
+            </div>
         </div>
     </div>
 
