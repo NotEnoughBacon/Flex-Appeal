@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../connection/connection');
+const sequelize = require('../config/connection');
 
-class Reps extends Model {}
+class Movements extends Model {}
 
-Reps.init(
+Movements.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,14 +11,25 @@ Reps.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        amount: {
-            type: DataTypes.INTEGER,
+        name: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
-        movement_id: {
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        premade_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'movements',
+                model: 'premade',
+                key: 'id'
+            }
+        },
+        custom_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'custom',
                 key: 'id'
             }
         },
@@ -32,4 +43,4 @@ Reps.init(
     }
 );
 
-module.exports = Reps;
+module.exports = Movements;

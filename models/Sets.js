@@ -15,6 +15,13 @@ Sets.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        movement_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'movements',
+                key: 'id'
+            }
+        },
     },
     {
         sequelize,
