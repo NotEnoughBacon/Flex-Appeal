@@ -40,6 +40,22 @@ User.init(
                 len: [8,64],
             },
         },
+        premade_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'premade',
+                key: 'id',
+            },
+        },
+        custom_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'custom',
+                key: 'id',
+            },
+        },
     },
     {       // add psw hashing before adding to db
         hooks: {

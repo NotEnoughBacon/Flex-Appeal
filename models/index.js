@@ -16,6 +16,7 @@ Users.hasMany(Premade, {
 Premade.belongsToMany(Users, {
 
     foreignKey: 'users_id',
+    through: 'users_premade_id'
 });
 
 Premade.hasMany(Movements, {
@@ -26,6 +27,7 @@ Premade.hasMany(Movements, {
 Movements.belongsToMany(Premade, {
 
     foreignKey: 'premade_id',
+    through: 'premade_movement_id'
 });
 
 Movements.hasMany(Reps, {
@@ -41,6 +43,7 @@ Movements.hasMany(Sets, {
 Reps.belongsToMany(Movements, {
 
     foreignKey: 'movements_id',
+    through: ''
 });
 
 Sets.belongsToMany(Movements, {
