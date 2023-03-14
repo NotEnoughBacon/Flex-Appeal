@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../connection/connection');
 
 
-class Custom extends Model {}
+class Workouts extends Model {}
 
-Custom.init(
+Workouts.init(
     {
         id:{
             type: DataTypes.INTEGER,
@@ -12,30 +12,21 @@ Custom.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name:{},
-        description:{
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        movements_id:{
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        sets_id:{
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'sets',
-                key: 'id'
+                model: 'users',
+                key: 'id',
             },
-        },    
-        reps_id:{
-            type: DataTypes.INTEGER,
+        },
+        name: {
+            type: DataTypes.STRING,
             allowNull: false,
-            references: {
-                model: 'reps',
-                key: 'id'
-            },
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
     },
     {
@@ -43,10 +34,8 @@ Custom.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'custom',
+        modelName: 'workouts',
     }
 );
 
-
-
-module.exports = Custom;
+module.exports = Workouts;

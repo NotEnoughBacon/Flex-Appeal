@@ -1,19 +1,18 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 
-const sequalize = require('../connection');
-const { DataTypes } = require('sequelize/types');
+const sequelize = require('../connection/connection');
 
 
 // Creates a new sequalize model for Users
-class User extends Model {
+class Users extends Model {
 checkPassword(loginPw){
 return bcrypt.compareSync(loginPw, this.password);
     }
 }
 
 // user attributes that are added to db
-User.init(
+Users.init(
     {
         id:{
             type: DataTypes.INTEGER,
@@ -54,9 +53,9 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'users',
     },
 
 );
 
-module.exports = User;
+module.exports = Users;
