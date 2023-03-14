@@ -30,25 +30,26 @@ Movements.belongsToMany(Premade, {
     through: 'premade_movement_id'
 });
 
-Movements.hasMany(Reps, {
+Movements.hasOne(Sets, {
 
     foreignKey: 'movements_id',
-});
-
-Movements.hasMany(Sets, {
-
-    foreignKey: 'movements_id',
-});
-
-Reps.belongsToMany(Movements, {
-
-    foreignKey: 'movements_id',
-    through: ''
 });
 
 Sets.belongsToMany(Movements, {
 
     foreignKey: 'movements_id',
+    through: 'movements_sets_id'
+});
+
+Sets.hasOne(Reps, {
+
+    foreignKey: 'sets_id',
+});
+
+Reps.belongsToMany(Sets, {
+
+    foreignKey: 'sets_id',
+    through: 'sets_reps_id'
 });
 
 // Custom relationship
@@ -60,6 +61,7 @@ Users.hasMany(Custom, {
 Custom.belongsToMany(Users, {
 
     foreignKey: 'users_id',
+    through: 'users_custom_id'
 });
 
 Custom.hasMany(Movements, {
@@ -70,19 +72,10 @@ Custom.hasMany(Movements, {
 Movements.belongsToMany(Custom, {
 
     foreignKey: 'custom_id',
+    through: 'custom_movement_id'
 });
 
-Movements.hasMany(Reps, {
-
-    foreignKey: 'movements_id',
-});
-
-Movements.hasMany(Sets, {
-
-    foreignKey: 'movements_id',
-});
-
-Reps.belongsToMany(Movements, {
+Movements.hasOne(Sets, {
 
     foreignKey: 'movements_id',
 });
@@ -90,6 +83,18 @@ Reps.belongsToMany(Movements, {
 Sets.belongsToMany(Movements, {
 
     foreignKey: 'movements_id',
+    through: 'movements_sets_id'
+});
+
+Sets.hasOne(Reps, {
+
+    foreignKey: 'sets_id',
+});
+
+Reps.belongsToMany(Sets, {
+
+    foreignKey: 'sets_id',
+    through: 'sets_reps_id'
 });
 
 module.exports = { Movements, Premade, Custom, Users, Reps, Sets };
