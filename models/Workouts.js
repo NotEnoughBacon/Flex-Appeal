@@ -1,15 +1,24 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../connection/connection');
 
-class Premade extends Model {}
 
-Premade.init(
-    {   
-        id: {
+class Workouts extends Model {}
+
+Workouts.init(
+    {
+        id:{
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'users',
+                key: 'id',
+            },
         },
         name: {
             type: DataTypes.STRING,
@@ -19,21 +28,14 @@ Premade.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        movement_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'movements',
-                key: 'id'
-            }
-         },
-    },   
+    },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'premade',
+        modelName: 'workouts',
     }
 );
 
-module.exports = Premade;
+module.exports = Workouts;
