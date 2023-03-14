@@ -19,7 +19,7 @@ body {
 
 .left-main {
     /* background-color: rgba(204,245,226,.75); */
-    background-color: rgba(71,133,194,.60);
+    background-color: rgba(9,188,215,.7);
     /* background-color: rgba(9,188,215,.75); */
     /* background-color: rgba(222,121,84,.75); */
     border-radius: 25px;
@@ -35,7 +35,10 @@ h1 {
     text-align: left;
     margin-right: 15%;
     /* background-color: #DE7954; */
-    background: linear-gradient(180deg, #DE7954, #80400b);
+    /* background: linear-gradient(180deg, #DE7954, #80400b); */
+    /* background: linear-gradient(180deg, #6c757d, #202324); */
+    /* background: linear-gradient(180deg, #a1a7ac, #6c757d); */
+    background: linear-gradient(180deg, #899197, #353839);
     clip-path: polygon(0% 0%, 100% 0%, 85% 120%, 0% 100%);
     border-radius: 10px;
     border-width: 1px;
@@ -124,8 +127,12 @@ h3 {
 .add-btn {
     border: solid;
     border-width: 1px;
+    border-color: #6c757d;
     /* background-color: #DE7954; */
-    background: linear-gradient(180deg, #DE7954, #80400b);
+    /* background: linear-gradient(180deg, #DE7954, #80400b); */
+    /* background: linear-gradient(180deg, #6c757d, #202324); */
+    /* background: linear-gradient(180deg, #a1a7ac, #6c757d); */
+    background: linear-gradient(180deg, #899197, #353839);
     border-radius: 25px;
     color: white;
     display: inline-block;
@@ -181,7 +188,7 @@ h3 {
 
 .random-workout {
     /* background-color: rgba(204,245,226,.75); */
-    background-color: rgba(71,133,194,.60);
+    background-color: rgba(9,188,215,.7);
     /* background-color: rgba(9,188,215,.75); */
     /* background-color: rgba(222,121,84,.75); */    
     border-radius: 25px;
@@ -196,8 +203,12 @@ h3 {
 .random-btn {
     border: solid;
     border-width: 1px;
+    border-color: #6c757d;
     /* background-color: #DE7954; */
-    background: linear-gradient(180deg, #DE7954, #80400b);
+    /* background: linear-gradient(180deg, #DE7954, #80400b); */
+    /* background: linear-gradient(180deg, #6c757d, #202324); */
+    /* background: linear-gradient(180deg, #a1a7ac, #6c757d); */
+    background: linear-gradient(180deg, #899197, #353839);
     border-radius: 25px;
     color: white;
     display: inline-block;
