@@ -15,6 +15,14 @@ Sets.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        reps_id:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'reps',
+                key: 'id',
+            }
+        },
         movement_id: {
             type: DataTypes.INTEGER,
             references: {
