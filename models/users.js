@@ -1,8 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 
-const sequalize = require('../connection');
-const { DataTypes } = require('sequelize/types');
+const sequelize = require('../connection/connection');
 
 
 // Creates a new sequalize model for Users
