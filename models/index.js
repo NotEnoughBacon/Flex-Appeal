@@ -1,92 +1,28 @@
 const Movements = require('./Movements');
-const Premade = require('./Premade');
-const Custom = require('./Custom');
+const Workouts = require('./Workouts');
 const Users = require('./Users');
-const Reps = require('./Reps');
-const Sets = require('./Sets');
 
 //Associations
 
 // Premade relationship
-Users.hasMany(Premade, {
+Users.hasMany(Workouts, {
 
-    foreignKey: 'users_id',
+    foreignKey: 'user_id',
 });
 
-Premade.belongsToMany(Users, {
+Workouts.belongsTo(Users, {
 
-    foreignKey: 'users_id',
+    foreignKey: 'user_id',
 });
 
-Premade.hasMany(Movements, {
+Workouts.hasMany(Movements, {
 
-    foreignKey: 'premade_id',
+    foreignKey: 'workout_id',
 });
 
-Movements.belongsToMany(Premade, {
+Movements.belongsTo(Workouts, {
 
-    foreignKey: 'premade_id',
+    foreignKey: 'workout_id',
 });
 
-Movements.hasMany(Reps, {
-
-    foreignKey: 'movements_id',
-});
-
-Movements.hasMany(Sets, {
-
-    foreignKey: 'movements_id',
-});
-
-Reps.belongsToMany(Movements, {
-
-    foreignKey: 'movements_id',
-});
-
-Sets.belongsToMany(Movements, {
-
-    foreignKey: 'movements_id',
-});
-
-// Custom relationship
-Users.hasMany(Custom, {
-
-    foreignKey: 'users_id',
-});
-
-Custom.belongsToMany(Users, {
-
-    foreignKey: 'users_id',
-});
-
-Custom.hasMany(Movements, {
-
-    foreignKey: 'custom_id',
-});
-
-Movements.belongsToMany(Custom, {
-
-    foreignKey: 'custom_id',
-});
-
-Movements.hasMany(Reps, {
-
-    foreignKey: 'movements_id',
-});
-
-Movements.hasMany(Sets, {
-
-    foreignKey: 'movements_id',
-});
-
-Reps.belongsToMany(Movements, {
-
-    foreignKey: 'movements_id',
-});
-
-Sets.belongsToMany(Movements, {
-
-    foreignKey: 'movements_id',
-});
-
-module.exports = { Movements, Premade, Custom, Users, Reps, Sets };
+module.exports = { Movements, Workouts, Users };

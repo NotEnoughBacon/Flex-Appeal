@@ -11,8 +11,6 @@
 
     <script src="https://kit.fontawesome.com/e44f5096bd.js" crossorigin="anonymous"></script>
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
     <link rel="stylesheet" href="css/login.css">
 
     <style>
@@ -60,6 +58,18 @@
 
         signinBtn.onclick = function() {
             nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+
+        } 
+
+        signupBtn.onclick = function() {
+            nameField.style.maxHeight = "65px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+
         } 
     </script>
     <!-- <script src="js/login.js"></script> -->
