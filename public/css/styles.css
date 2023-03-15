@@ -18,10 +18,8 @@ body {
 }
 
 .left-main {
-    /* background-color: rgba(204,245,226,.75); */
-    background-color: rgba(71,133,194,.60);
-    /* background-color: rgba(9,188,215,.75); */
-    /* background-color: rgba(222,121,84,.75); */
+    /* background-color: rgba(9,188,215,.7); */
+    background-color: rgba(255,255,255,.7);
     border-radius: 25px;
     border-width: 1px;
     font-size: 20px;
@@ -34,8 +32,8 @@ body {
 h1 {
     text-align: left;
     margin-right: 15%;
-    /* background-color: #DE7954; */
-    background: linear-gradient(180deg, #DE7954, #80400b);
+    /* background: linear-gradient(180deg, #899197, #353839); */
+    background: #4785c2;
     clip-path: polygon(0% 0%, 100% 0%, 85% 120%, 0% 100%);
     border-radius: 10px;
     border-width: 1px;
@@ -47,16 +45,18 @@ h1 {
 }
 
 h2 {
-    color: white;
+    /* color: white; */
+    color: #4785c2;
     margin-top: 10%;
-    font-weight: lighter;
+    /* font-weight: lighter; */
     padding-top: 5%;
 }
 
 h3 {
     font-size: 110%;
-    color: white;
-    font-weight: lighter;
+    /* color: white; */
+    color: #4785c2;
+    /* font-weight: lighter; */
 }
 
 .left-title {
@@ -70,8 +70,9 @@ h3 {
     margin: 0 auto;
     width: 70%;
     height: 100%;
-    color: white;
-    font-weight: lighter;
+    /* color: white; */
+    color: #4785c2;
+    /* font-weight: lighter; */
 }
 
 .workout-entry {
@@ -80,8 +81,9 @@ h3 {
     width: 70%;
     height: 100%;
     display: inline-flex;
-    color: white;
-    font-weight: lighter;
+    /* color: white; */
+    color: #4785c2;
+    /* font-weight: lighter; */
 }
 
 .workout-entry-left {
@@ -124,8 +126,9 @@ h3 {
 .add-btn {
     border: solid;
     border-width: 1px;
-    /* background-color: #DE7954; */
-    background: linear-gradient(180deg, #DE7954, #80400b);
+    border-color: #6c757d;
+    /* background: linear-gradient(180deg, #899197, #353839); */
+    background: #4785c2;
     border-radius: 25px;
     color: white;
     display: inline-block;
@@ -135,7 +138,7 @@ h3 {
     text-align: center;
     cursor: pointer;
     height: 80%;
-    font-weight: lighter;
+    /* font-weight: lighter; */
 }
 
 .saved-workouts {
@@ -180,10 +183,8 @@ h3 {
 }
 
 .random-workout {
-    /* background-color: rgba(204,245,226,.75); */
-    background-color: rgba(71,133,194,.60);
-    /* background-color: rgba(9,188,215,.75); */
-    /* background-color: rgba(222,121,84,.75); */    
+    /* background-color: rgba(9,188,215,.7); */
+    background-color: rgba(255,255,255,.7);
     border-radius: 25px;
     border-width: 1px;
     box-shadow: 0px 5px 10px 0px black;
@@ -196,8 +197,9 @@ h3 {
 .random-btn {
     border: solid;
     border-width: 1px;
-    /* background-color: #DE7954; */
-    background: linear-gradient(180deg, #DE7954, #80400b);
+    border-color: #6c757d;
+    /* background: linear-gradient(180deg, #899197, #353839); */
+    background: #4785c2;
     border-radius: 25px;
     color: white;
     display: inline-block;

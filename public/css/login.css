@@ -27,6 +27,7 @@
     margin-bottom: 60px;
     color: #4785c2;
     position: relative;
+    /* font-weight: lighter; */
 }
 
 .login-box h1::after {
@@ -79,7 +80,7 @@ p {
 
 p a {
     text-decoration: none;
-    color: #4785c2;
+    color: blue;
 }
 
 .btn-field {
@@ -91,11 +92,12 @@ p a {
 .btn-field button {
     flex-basis: 48%;
     background: #4785c2;
+    /* background: linear-gradient(180deg, #899197, #353839); */
     color: #fff;
     height: 40px;
     border-radius: 20px;
     border: 0;
-    outline; 0;
+    outline: 0;
     cursor: pointer;
     /* transition: background 1s; */
 }
