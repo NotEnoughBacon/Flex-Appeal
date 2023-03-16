@@ -1,5 +1,5 @@
 const router = require('express').Router(); 
-const { Workout, Exercise } = require('../models');
+const { Workouts, } = require('../../models');
 
 // GET all workouts
 router.get('/', (req, res) => {
@@ -34,3 +34,5 @@ router.get('/:id', (req, res) => {
             res.status(500).json(err);
         });
 }); 
+
+module.exports = router;
