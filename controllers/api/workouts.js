@@ -4,7 +4,7 @@ const { Workouts } = require('../../models');
 // GET all workouts
 router.get('/', (req, res) => {
     console.log('======================');
-    Workout.findAll({
+    Workouts.findAll({
         attributes: { exclude: ['password'] }
     })
         .then(dbWorkoutData => res.json(dbWorkoutData))
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 // GET a single workout
 router.get('/:id', (req, res) => {
-    Workout.findOne({
+    Workouts.findOne({
         attributes: { exclude: ['password'] },
         where: {
             id: req.params.id

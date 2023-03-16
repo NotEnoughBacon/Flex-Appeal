@@ -217,7 +217,7 @@ const movementData = [
 
 async function seedMovements() {
     try {
-        await Movement.bulkCreate(movementData);
+        await Movements.bulkCreate(movementData);
         console.log('movement data seeded');
     } catch (error) {
         console.error('movement data not seeded', error);
