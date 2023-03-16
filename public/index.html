@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Flex Appeal</title>
+    <title>Flex Appeal Login</title>
     <meta name="description" content="A simple web application to maximize your workout planning">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/e44f5096bd.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <style>
         body {
-        /* background-image: url("media/FlexAppeal_Main.jpg"); */
-        background-image: linear-gradient(rgba(9,188,215,0.7), rgba(9,188,215,0.7)), url("media/FlexAppeal-Weights.jpeg");
-        /* background-image: url("media/FlexAppeal-Weights.jpeg"); */
+        background-image: linear-gradient(rgba(9,188,215,0.7), rgba(9,188,215,0.7)), url("media/FlexAppeal_Main.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -26,83 +24,53 @@
 </head>
 
 <body>
-    <div id="master-container" class="master-container">
-        <!-- left-side master container -->
-        <div class="left-main transparent">
-            <!-- Use handlebars to auto-populate this with user first name -->
-            <h1 class="opaque">Welcome back {{first-name}}</h1>
-            <div class="left-title">
-                <h2 class="opaque">Build your workout</h2>
-            </div>
-            <div class="workout-plan-entry opaque">
-                <label for="user-list-title">Name: </label>
-                <input type="text" id="user-list-title"><br>
-                <label for="user-list-desc">Description: </label>
-                <input type="text" id="user-list-desc"><br>
-            </div>
-            <div class="workout-entry opaque">
-                <div class="workout-entry-left">
-                    <label for="workout-name">Movement: </label>
-                    <input type="text" id="workout-name" class="workout-input"><br>
-                    <input type="text" id="workout-sets" class="workout-input"><br>
-                    <input type="text" id="workout-reps" class="workout-input"><br>
+    <div class="container">
+        <div class="login-box">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p>Missing login info? <a href="#">Let us help!</a></p>
                 </div>
-                <!-- Button to add user-entry for exercise to the "workout plan" in HTML -->
-                <div class="workout-entry-right opaque">
-                    <button id="add-button" type="submit" class="add-btn">Add Exercise</button>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign Up</button>
+                    <button type="button" id="signinBtn" class="disable">Sign In</button>
                 </div>
-            </div>
-            <div class="saved-workouts opaque">
-                <div class="saved-workouts-left">
-                    <h3>Workout Plan: </h3>
-                </div>
-                <div class="saved-workouts-right">
-                    <div class="saved-1 saved">Placeholder</div>
-                    <div class="saved-2 saved">Placeholder</div>
-                    <div class="saved-3 saved">Placeholder</div>
-                    <div class="saved-4 saved">Placeholder</div>
-                    <div class="saved-5 saved">Placeholder</div>
-                </div>
-            </div>
-            <!-- Button to save workout list to user DB -->
-            <div class="left-main-submit opaque">
-                <button id="add-button" type="submit" class="add-btn">Add Workout</button>
-            </div>
-        </div>
-        <!-- Right-side master container -->
-        <div class="right-main">
-            <!-- Div that will house user's saved workouts -->
-            <div class="random-workout">
-            <h2>Your Workouts</h2>
-                <div class="user-workouts">
-                    <div class="saved-1 saved">Placeholder</div>
-                    <div class="saved-2 saved">Placeholder</div>
-                    <div class="saved-3 saved">Placeholder</div>
-                    <div class="saved-4 saved">Placeholder</div>
-                    <div class="saved-5 saved">Placeholder</div>
-                </div>
-            </div>
-            <!-- Gives user Push, Pull, and leg search options for random exercises -->
-            <div class="random-workout">
-                <h2 class="random">Random Workout</h2>
-                <button id="push-workout" type="submit" class="random-btn">Push Workout</button>
-                <button id="pull-workout" type="submit" class="random-btn">Pull Workout</button>
-                <button id="leg-workout" type="submit" class="random-btn">Leg Workout</button>
-            </div>
-            <!-- Houses social media buttons -->
-            <div class="random-workout">
-                <h2 class="share">Let's Share!</h2>
-                <div class="socials">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-reddit"></a>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
+    <script>
+        let signupBtn = document.getElementById('signupBtn');
+        let signinBtn = document.getElementById('signinBtn');
+        let nameField = document.getElementById('nameField');
+        let title = document.getElementById('title');
 
-    <script src="js/scripts.js"></script>
+        signinBtn.onclick = function() {
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        } 
+
+        signupBtn.onclick = function() {
+            nameField.style.maxHeight = "65px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        } 
+    </script>
+    <!-- <script src="js/login.js"></script> -->
+    <!-- <script src="js/scripts.js"></script> -->
 </body>
-
 </html>
