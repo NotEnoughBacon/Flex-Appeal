@@ -1,35 +1,58 @@
-document.getElementById('signupBtn').addEventListener('click', (event) => {
+const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const name = document.getElementById('name').value;
-    const password = document.getElementById('password').value;
+    const name = document.querySelector('#name').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value.trim();
 
-    const userData = {
-        name,
-        email,
-        password
-    };
-
-    fetch('/api/users', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-    }).then(response => {
+    if (name && email && password) {
+        const response = await fetch('/api/users', {
+            method: 'POST',
+            body: JSON.stringify({
+                name,
+                email,
+                password
+            }),
+            headers: {
+                'content-type': 'application/json'
+            },
+        });
 
         if (response.ok) {
-            return response.json();
+            document.location.replace('/dashboard');
         } else {
-            throw new Error('Could not create user');
+            alert(response.statusText);
         }
-    }).then(data => {
+    }
+};
 
-        console.log('user created successfully', data);
+const loginFormHandler = async (event) => {
+    event.preventDefault();
 
-    }).catch(error => {
+    const email = document.querySelector('#email').value.trim();
+    const password = document.querySelector('#password').value.trim();
 
-        console.error('user not created', error);
-    });
-});
+    if (email && password) {
+
+        const response = await fetch('/api/users/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                email,
+                password
+            }),
+            headers: {
+                'content type': 'application/json'
+            },
+        });
+
+        if (response.ok) {
+
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
+        }
+    }
+};
+
+document.querySelector('#signinBtn').addEventListener('click', loginFormHandler);
+document.querySelector('#signupBtn').addEventListener('click', signupFormHandler);

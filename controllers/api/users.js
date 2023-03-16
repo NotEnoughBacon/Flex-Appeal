@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment } = require('../models');
+const { Users, } = require('../../models');
 
 // GET all users
 router.get('/', (req, res) => {
@@ -52,15 +52,15 @@ router.get('/:id', (req, res) => {
 
 // POST a new user
 router.post('/', (req, res) => {
-    User.create({
-        username: req.body.username,
+    Users.create({
+        name: req.body.name,
         email: req.body.email,
         password: req.body.password
     })
         .then(dbUserData => {
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;
-                req.session.username = dbUserData.username;
+                req.session.name = dbUserData.name;
                 req.session.loggedIn = true;
 
                 res.json(dbUserData);
@@ -71,20 +71,20 @@ router.post('/', (req, res) => {
 
 // Login
 router.post('/login', (req, res) => {
-    User.findOne({
+    Users.findOne({
         where: {
             email: req.body.email
         }
     }).then(dbUserData => {
         if (!dbUserData) {
-            res.status(400).json({ message: 'No user with that email address!' });
+            res.status(400).json({ message: 'Invalid email or password' });
             return;
         }
 
         const validPassword = dbUserData.checkPassword(req.body.password);
 
         if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect password!' });
+            res.status(400).json({ message: 'Invalid email or password' });
             return;
         }
 
