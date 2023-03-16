@@ -41,7 +41,7 @@ const loginFormHandler = async (event) => {
                 password
             }),
             headers: {
-                'content type': 'application/json'
+                'Content-Type': 'application/json'
             },
         });
 
@@ -49,7 +49,8 @@ const loginFormHandler = async (event) => {
 
             document.location.replace('/dashboard');
         } else {
-            alert(response.statusText);
+            const responseData = await response.json();
+            alert(responseData.message || response.statusText);
         }
     }
 };

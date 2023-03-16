@@ -1,4 +1,5 @@
 //Setting up all the dependencies and middleware
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
@@ -29,20 +30,17 @@ const sess = {
 //calling the session
 app.use(session(sess));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
 //Routing API to controllers folder
-//app.use(routes);
-
-
-
-
-
-
-
+app.use(routes);
 
 //Syncing the database and starting the server
 sequelize.sync({ 
     force: false 
 }).then(() => {
-    app.listen(PORT, () => console.log(`IM LISTENING ON PORT ${PORT}, HURRY UP!`));
+    app.listen(PORT, () => console.log(`IM LISTENING HERE http://localhost:${PORT}, HURRY UP!`));
 });
 
