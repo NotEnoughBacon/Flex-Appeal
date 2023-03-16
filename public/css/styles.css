@@ -18,8 +18,8 @@ body {
 }
 
 .left-main {
-    /* background-color: rgba(9,188,215,.7); */
-    background-color: rgba(255,255,255,.7);
+    /* background-color: rgba(255,255,255,.7); */
+    background-color: rgb(255,255,255);
     border-radius: 25px;
     border-width: 1px;
     font-size: 20px;
@@ -27,6 +27,7 @@ body {
     height: 90%;
     width: 60%;
     margin-top: 6%;
+    box-shadow: 0px 5px 10px 0px black;
 }
 
 h1 {
@@ -100,27 +101,32 @@ h3 {
     width: 50%;
     margin-bottom: 3%;
     margin-top: 3%;
+    background: #eaeaea;
 }
 
 #user-list-desc {
     width: 50%;
     margin-right: 46px;
     margin-bottom: 5%;
+    background: #eaeaea;
 }
 
 #workout-sets {
     width: 61%;
     margin-bottom: 2%;
+    background: #eaeaea;
 }
 
 #workout-reps {
     width: 61%;
     margin-bottom: 5%;
+    background: #eaeaea;
 }
 
 #workout-name {
     width: 61%;
     margin-bottom: 2%;
+    background: #eaeaea;
 }
 
 .add-btn {
@@ -163,6 +169,7 @@ h3 {
     height: 90%;
     width: 60%;
     display: inline-block;
+    background: #eaeaea;
 }
 
 .left-main-submit {
@@ -183,8 +190,8 @@ h3 {
 }
 
 .random-workout {
-    /* background-color: rgba(9,188,215,.7); */
-    background-color: rgba(255,255,255,.7);
+    /* background-color: rgba(255,255,255,.7); */
+    background-color: rgb(255,255,255);
     border-radius: 25px;
     border-width: 1px;
     box-shadow: 0px 5px 10px 0px black;
@@ -215,7 +222,7 @@ h3 {
 }
 
 .user-workouts {
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     border-radius: 25px;
     border-width: 1px;
     box-shadow: 0px 5px 10px 0px black;
@@ -224,6 +231,7 @@ h3 {
     height: 90%;
     width: 85%;
     display: inline-block;
+    background: #eaeaea;
 }
 
 .socials {
