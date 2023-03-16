@@ -16,9 +16,9 @@ router.post('/', async (req, res) => {
             req.session.user_id = newUser.id;
             req.session.name = newUser.name;
             req.session.loggedIn = true;
+            res.redirect('/dashboard');
         });
 
-        res.redirect('/dashboard');
     } catch (err) {
         console.log(err)
     }
