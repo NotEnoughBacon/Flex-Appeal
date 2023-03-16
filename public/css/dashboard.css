@@ -25,6 +25,30 @@ body {
     display: inline-flex;
 }
 
+
+/* styled navbar J.Aguirre*/
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbuttons{
+
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+p:hover {
+    transform: scale(1.15);
+        transition: all .025s ease-in-out;
+
+}
+
+/*----------*/
+
+
+
 h1 {
     text-align: left;
     margin-right: 15%;
@@ -34,7 +58,7 @@ h1 {
     clip-path: polygon(0% 0%, 100% 0%, 85% 120%, 0% 100%);
     border-radius: 10px;
     border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
+    box-shadow: 7px 5px 5px -1px rgb(28, 28, 28);/* lightened shadow, clean up left edge shadow, smoother transition */
     opacity: 1.0;
     color: white;
     padding-left: 5%;
