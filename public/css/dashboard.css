@@ -31,15 +31,17 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
-.navbuttons{
 
-}
+/* .navbuttons{
+
+} */
+
 a:link {
     color: white;
     text-decoration: none;
 }
 
-p:hover {
+.grow:hover:hover {
     transform: scale(1.15);
         transition: all .025s ease-in-out;
 
