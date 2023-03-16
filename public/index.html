@@ -27,19 +27,19 @@
     <div class="container">
         <div class="login-box">
             <h1 id="title">Sign Up</h1>
-            <form>
+            <form id="login-form">
                 <div class="input-group">
                     <div class="input-field" id="nameField">
                         <i class="fa fa-user"></i>
-                        <input type="text" placeholder="Name">
+                        <input id="name" type="text" placeholder="Name">
                     </div>
                     <div class="input-field">
                         <i class="fa-regular fa-envelope"></i>
-                        <input type="email" placeholder="Email">
+                        <input id="email" type="email" placeholder="Email">
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password">
+                        <input id="password" type="password" placeholder="Password">
                     </div>
                     <p>Missing login info? <a href="#">Let us help!</a></p>
                 </div>
@@ -70,7 +70,7 @@
             signinBtn.classList.add("disable");
         } 
     </script>
-    <!-- <script src="js/login.js"></script> -->
+    <script src="./js/login.js"></script>
     <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>
