@@ -19,13 +19,6 @@ const workoutData = [
 
 ];
 
-async function seedWorkouts() {
-    try {
-        await Workouts.bulkCreate(workoutData);
-        console.log('workout data seeded');
-    } catch (error) {
-        console.error('workout data not seeded', error);
-    }
-};
+const seedWorkouts = () => Workouts.bulkCreate(workoutData);
 
-seedWorkouts();
+module.exports = seedWorkouts;
