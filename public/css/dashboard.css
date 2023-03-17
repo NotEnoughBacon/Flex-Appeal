@@ -40,7 +40,9 @@ a:link {
     color: white;
     text-decoration: none;
 }
-
+a:visited { 
+    color: white;
+}
 .grow:hover:hover {
     transform: scale(1.15);
         transition: all .025s ease-in-out;
