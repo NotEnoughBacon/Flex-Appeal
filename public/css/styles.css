@@ -174,6 +174,11 @@ h3 {
     /* font-weight: lighter; */
 }
 
+.add-btn:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
+}
+
 .saved-workouts {
     font-size: 20px;
     margin: 0 auto;
@@ -248,6 +253,11 @@ h3 {
     font-weight: lighter;
 }
 
+.random-btn:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
+}
+
 .user-workouts {
     /* background-color: whitesmoke; */
     border-radius: 25px;
@@ -282,11 +292,21 @@ h3 {
     background: #3B5998;
     color: white;
   }
-  
+
+.fa-facebook:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
+}
+ 
 /* Twitter */
 .fa-twitter {
     background: #55ACEE;
     color: white;
+}
+
+.fa-twitter:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
 }
 
 /* instagram */
@@ -294,11 +314,21 @@ h3 {
     background: linear-gradient(360deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     color: white;
   }
+
+.fa-instagram:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
+}
   
 /* Reddit */
 .fa-reddit {
     background: #ff4500;
     color: white;
+}
+
+.fa-reddit:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
 }
 
 @media (max-width: 690px) {

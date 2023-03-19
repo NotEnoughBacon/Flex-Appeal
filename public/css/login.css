@@ -72,6 +72,11 @@ input {
     color: #999;
 }
 
+.input-field:hover{
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;    
+}
+
 p {
     text-align: left;
     font-size: 13px;
@@ -88,6 +93,11 @@ p a {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.transform:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
 }
 
 .btn-field button {
