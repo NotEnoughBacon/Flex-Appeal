@@ -16,8 +16,6 @@
     <style>
         body {
         background-image: url("media/FlexAppeal_Main.jpg");
-        /* background-image: linear-gradient(rgba(9,188,215,0.7), rgba(9,188,215,0.7)), url("media/FlexAppeal-Dashboard.jpeg"); */
-        /* background-image: url("media/FlexAppeal-Dashboard.jpeg"); */
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -28,13 +26,17 @@
 <body>
     <nav> <!-- Navbar added uses h1  styles and navbar, h1 styling for shadows will also be adjeusted to smooth out corners J.Aguirre-->
         <h1 class = "navbar">
-            <p class="navbuttons grow" id="home"><a href="/dashboard">Home</a></p>
-            <p class="grow" id="workouts"><a href="/search">Workouts</a></p>
-            <p class="grow" id="logout"><a href="/api/users/logout">Logout</a></p>
+            <p class="grow"><a href="/search">Workouts</a></p>
+            <p class="grow"><a href="/api/users/logout">Logout</a></p>
         </h1>
     </nav>
     <div id="master-container" class="master-container">
-        <h1>Good {{Morning; Afternoon; Evening}} {{First Name}}</h1>
+        {{!-- <h1>Welcome back {{First Name}}</h1> --}}
+        <div class="header-container">
+            <h1>Welcome Back</h1>
+        </div>
+
+        {{{dashboard}}}
         <div class="top-row-master">
             <div id="top-1" class="top-row-container">
                 <p>Steps Placeholder</p>
@@ -59,8 +61,6 @@
         </div>
     </div>
 
-
-    <script src="js/scripts.js"></script>
     <script src="./js/dashboard.js"></script>
 </body>
 

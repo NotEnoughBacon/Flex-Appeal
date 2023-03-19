@@ -1,6 +1,3 @@
-const clockElement = document.querySelector(".clock");
-const clockObject = new DigitalClock(clockElement);
-
 class DigitalClock {
     constructor(element) {
         this.element = element;
@@ -32,13 +29,40 @@ class DigitalClock {
         };
     }
 };
+const clockElement = document.querySelector(".clock");
+const clockObject = new DigitalClock(clockElement);
 
 fetch ('/api/workouts')
     .then (response => response.json())
-    .then (workouts => {
+    .then (response => {
+
+        const userWorkoutsArray = []
+
+        userWorkouts = response.workouts.forEach(workout => {
+
+            if (workout.user_id === response.userId) {
+
+                userWorkoutsArray.push(workout)
+            }
+        })
         
+        console.log(userWorkoutsArray)
+
+        const container = document.getElementById('bottom-1');
+
+        userWorkoutsArray.forEach(workout => {
+
+            const workoutDiv = document.createElement('div');
+            workoutDiv.classList.add('workout-div');
+
+            const workoutName = document.createElement('h3');
+            workoutName.textContent = workout.name;
+            workoutDiv.appendChild(workoutName);
+
+            container.appendChild(workoutDiv);
+        });
     })
-   
+.catch (error => console.error(error));
     
 
 
