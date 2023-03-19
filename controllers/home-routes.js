@@ -5,7 +5,8 @@ const path = require('path');
 router.get('/login', (req, res) => {
     
    if (req.session.loggedIn) {
-       res.redirect('/dashboard');
+    //    res.redirect('/dashboard');
+       res.render('main');
        return;
    }
    res.sendFile(path.join(__dirname, '../public/index.html'));
@@ -17,7 +18,8 @@ router.get('/dashboard', async (req, res) => {
         res.redirect('/login')
         return;
    }
-   res.sendFile(path.join(__dirname, '../public/dashboard.html'));
+//    res.sendFile(path.join(__dirname, '../public/dashboard.html'));
+    res.render('main');
 });
 
 router.get('/search', (req, res) => {
