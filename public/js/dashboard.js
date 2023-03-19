@@ -1,5 +1,6 @@
 const clockElement = document.querySelector(".clock");
 const clockObject = new DigitalClock(clockElement);
+
 class DigitalClock {
     constructor(element) {
         this.element = element;
