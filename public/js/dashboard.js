@@ -1,3 +1,5 @@
+const clockElement = document.querySelector(".clock");
+const clockObject = new DigitalClock(clockElement);
 class DigitalClock {
     constructor(element) {
         this.element = element;
@@ -28,9 +30,15 @@ class DigitalClock {
             isAm: now.getHours() < 12
         };
     }
-}
+};
 
-const clockElement = document.querySelector(".clock");
-const clockObject = new DigitalClock(clockElement);
+fetch ('/api/workouts')
+    .then (response => response.json())
+    .then (workouts => {
+        
+    })
+   
+    
+
 
 clockObject.start();
