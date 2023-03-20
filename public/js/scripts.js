@@ -1,41 +1,31 @@
 let movementArray = []
 const preMadeArray = []
+const workoutArr = []
 
 const fetchData = () => {
     fetch ('/api/workouts')
     .then (response => response.json())
     .then (response => {
 
-        sessionStorage.setItem('userId', response.userId)
+        const container = document.getElementById('user-workouts');
+        container.innerHTML = '';
 
-        const workoutArr = []
+        sessionStorage.setItem('userId', response.userId)
 
         responseWorkouts = response.workouts.forEach(workout => {
 
             if (workout.user_id === response.userId) {
 
-                workoutArr.push(workout)
-            } else if (workout.user_id === null) {
-
-                preMadeArray.push(workout)
-                console.log(preMadeArray);
-            }
-
-        });
-
-        const container = document.getElementById('user-workouts');
-        container.innerHTML = '';
-
-        workoutArr.forEach(workout => {
-                
                 const workoutDiv = document.createElement('div');
                 workoutDiv.classList.add('saved');
                 workoutDiv.textContent = workout.name;
 
                 container.appendChild(workoutDiv);
-        })
+            } else if (workout.user_id === null) {
 
-
+                preMadeArray.push(workout)
+            }
+        });
     }).catch (error => console.error(error));
 };
 
@@ -66,8 +56,6 @@ function addMovement() {
         document.querySelector('#workout-name').value = '';
         document.querySelector('#workout-sets').value = '';
         document.querySelector('#workout-reps').value = '';
-
-        console.log(movementArray)
     }
 };
 
@@ -174,7 +162,8 @@ async function addWorkout() {
                     movementArray = [];
                     document.querySelector('#user-list-title').value = '';
                     document.querySelector('#user-list-desc').value = '';
-                    // document.getElementById('user-workouts').innerHTML = '';
+                    document.querySelector('#saved-movements').innerHTML = '';
+                    document.getElementById('user-workouts').innerHTML = '';
                     fetchData();
                 }
             })
@@ -186,7 +175,6 @@ document.querySelector('#add-button').addEventListener('click', addMovement);
 document.querySelector('#push-workout').addEventListener('click', randomWorkout1);
 document.querySelector('#pull-workout').addEventListener('click', randomWorkout2);
 document.querySelector('#leg-workout').addEventListener('click', randomWorkout3);
-document.querySelector('#add-button').addEventListener('click', addMovement);
 document.querySelector('#submit-button').addEventListener('click', addWorkout);
 fetchData();
 

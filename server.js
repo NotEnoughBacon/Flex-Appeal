@@ -3,19 +3,17 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
+const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const {v4 : uuidv4} = require('uuid');
 
 const sequelize = require('./connection/connection');
 const sequelizeStore = require('connect-session-sequelize')(session.Store);
-const handlebars = require('express-handlebars');
-const hbs = handlebars.create();
 
 const app = express();
 const PORT = process.env.PORT || 3030;
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+const hbs = exphbs.create({});
 
 //Setting up the connections
 const sess = {
@@ -35,15 +33,20 @@ const sess = {
 //calling the session
 app.use(session(sess));
 
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {
     console.log(req.session);
     next();
 })
-app.use(express.static(path.join(__dirname, 'public')));
 
 //Routing API to controllers folder
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
+
 app.use(routes);
 
 //Syncing the database and starting the server

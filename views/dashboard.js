@@ -29,8 +29,6 @@ class DigitalClock {
         };
     }
 };
-const clockElement = document.querySelector(".clock");
-const clockObject = new DigitalClock(clockElement);
 
 fetch ('/api/workouts')
     .then (response => response.json())
@@ -64,6 +62,47 @@ fetch ('/api/workouts')
     })
 .catch (error => console.error(error));
     
+var ctx = document.getElementById('bottom-2').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Completed Push', 'Completed Pull', 'Completed Legs'],
+        datasets: [{
+            label: 'Total Number',
+            data: [12, 19, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 4
+        }]
+    },
+    options: {
+        cutoutPercentage: 50, // Percentage of the chart that is cut out of the middle
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'bottom',
+            }
+        }
+    }
+});
+
+function update () {
+    myChart.data.datasets.forEach((dataset) => {
+        dataset.data = dataset.data.map(() => randomScalingFactor());
+    });
+    myChart.update();
+} 
 
 
+
+const clockElement = document.querySelector(".clock");
+const clockObject = new DigitalClock(clockElement);
 clockObject.start();
