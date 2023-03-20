@@ -1,6 +1,6 @@
 const Movements = require('./Movements');
 const Workouts = require('./Workouts');
-const Users = require('./Users');
+const Users = require('./Humans');
 
 //Associations
 
