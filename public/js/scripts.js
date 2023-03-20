@@ -1,5 +1,7 @@
 let movementArray;
 
+const preMadeArray = []
+
 fetch ('/api/workouts')
     .then (response => response.json())
     .then (response => {
@@ -11,7 +13,12 @@ fetch ('/api/workouts')
             if (workout.user_id === response.userId) {
 
                 workoutArr.push(workout)
+            } else if (workout.user_id === null) {
+
+                preMadeArray.push(workout)
+                console.log(preMadeArray);
             }
+
         });
 
         const container = document.getElementById('user-workouts');
@@ -71,6 +78,65 @@ function addMovement() {
 //     document.querySelector('#user-list-desc').value = '';
 // };
 
+function randomWorkout1() {
+    console.log('click');
+
+    const result1 = preMadeArray.find(obj => obj.id === 1);
+    const container = document.getElementById('user-results');
+
+    container.innerHTML= '';
+
+    const resultDiv = document.createElement('div');
+
+    resultDiv.classList.add('result');
+
+    resultDiv.textContent = `Name: ${result1.name} \n\n Description: ${result1.description}`;
+    container.appendChild(resultDiv);
+
+    console.log(result1);
+}
+
+function randomWorkout2() {
+    console.log('click');
+
+    const result2 = preMadeArray.find(obj => obj.id === 2);
+    const container = document.getElementById('user-results');
+
+    container.innerHTML= '';
+
+    const resultDiv = document.createElement('div');
+
+    resultDiv.classList.add('result');
+
+    resultDiv.textContent = `Name: ${result2.name} \n\n Description: ${result2.description}`;
+    container.appendChild(resultDiv);
+
+    console.log(result2);
+}
+
+function randomWorkout3() {
+    document.querySelector('#user-results').value = '';
+    console.log('click');
+
+    const result3 = preMadeArray.find(obj => obj.id === 3);
+    const container = document.getElementById('user-results');
+
+    container.innerHTML= '';
+
+    const resultDiv = document.createElement('div');
+
+    resultDiv.classList.add('result');
+
+    resultDiv.textContent = `Name: ${result3.name} \n\n Description: ${result3.description}`;
+    container.appendChild(resultDiv);
+
+    console.log(result3);
+}
+
 document.querySelector('#add-button').addEventListener('click', addMovement);
 
 // document.querySelector('#submit-button').addEventListener('click', addWorkout);
+
+document.querySelector('#push-workout').addEventListener('click', randomWorkout1);
+document.querySelector('#pull-workout').addEventListener('click', randomWorkout2);
+document.querySelector('#leg-workout').addEventListener('click', randomWorkout3);
