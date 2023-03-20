@@ -8,7 +8,13 @@ router.get('/', async (req, res) => {
 
         const workoutsData = await Workouts.findAll();
 
-        res.status(200).json(workoutsData);
+        const responseData = {
+
+            userId: req.session.user_id,
+            workouts:workoutsData
+        }
+
+        res.status(200).json(responseData);
 
     } catch (err) {
 

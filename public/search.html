@@ -27,9 +27,9 @@
 
 <body>
     <nav> <!-- Navbar added uses h1  styles and navbar, h1 styling for shadows will also be adjeusted to smooth out corners J.Aguirre-->
-        <h1 class = 'navbar'>
-            <p><a href="dashboard.html">Dashboard</a></p>
-            <p><a href="index.html" id="logout">Logout</a></p>
+        <h1 class = "navbar">
+            <p><a href="/dashboard">Dashboard</a></p>
+            <p><a href="/api/users/logout" id="logout">Logout</a></p>
         </h1>
     </nav>
     <div id="master-container" class="master-container">
@@ -49,9 +49,9 @@
             <div class="workout-entry opaque">
                 <div class="workout-entry-left">
                     <label for="workout-name">Movement: </label>
-                    <input type="text" id="workout-name" class="workout-input"><br>
-                    <input type="text" id="workout-sets" class="workout-input"><br>
-                    <input type="text" id="workout-reps" class="workout-input"><br>
+                    <input type="text" id="workout-name" class="workout-input" placeholder="Movement name"><br>
+                    <input type="text" id="workout-sets" class="workout-input" placeholder="Sets"><br>
+                    <input type="text" id="workout-reps" class="workout-input" placeholder="Reps"><br>
                 </div>
                 <!-- Button to add user-entry for exercise to the "workout plan" in HTML -->
                 <div class="workout-entry-right opaque">
@@ -62,12 +62,8 @@
                 <div class="saved-workouts-left">
                     <h3>Workout Plan: </h3>
                 </div>
-                <div class="saved-workouts-right">
-                    <div class="saved-1 saved">Placeholder</div>
-                    <div class="saved-2 saved">Placeholder</div>
-                    <div class="saved-3 saved">Placeholder</div>
-                    <div class="saved-4 saved">Placeholder</div>
-                    <div class="saved-5 saved">Placeholder</div>
+                <div id="saved-movements" class="saved-workouts-right">
+                    <!-- User's saved movements go here -->
                 </div>
             </div>
             <!-- Button to save workout list to user DB -->
@@ -80,12 +76,8 @@
             <!-- Div that will house user's saved workouts -->
             <div class="random-workout">
             <h2>Your Workouts</h2>
-                <div class="user-workouts">
-                    <div class="saved-1 saved">Placeholder</div>
-                    <div class="saved-2 saved">Placeholder</div>
-                    <div class="saved-3 saved">Placeholder</div>
-                    <div class="saved-4 saved">Placeholder</div>
-                    <div class="saved-5 saved">Placeholder</div>
+                <div id="user-workouts" class="user-workouts">
+                <!--Users own saved workouts go here--> 
                 </div>
             </div>
             <!-- Gives user Push, Pull, and leg search options for random exercises -->
@@ -99,16 +91,20 @@
             <div class="random-workout">
                 <h2 class="share">Let's Share!</h2>
                 <div class="socials">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-reddit"></a>
+                    <a href="https://facebook.com" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com" class="fa fa-twitter"></a>
+                    <a href="https://instagram.com" class="fa fa-instagram"></a>
+                    <a href="https://reddit.com" class="fa fa-reddit"></a>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="js/scripts.js"></script>
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 737d642150704899bf78fac09ff1c076d02eac12
 </body>
 
 </html>

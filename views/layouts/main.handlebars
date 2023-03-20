@@ -26,14 +26,17 @@
 <body>
     <nav> <!-- Navbar added uses h1  styles and navbar, h1 styling for shadows will also be adjeusted to smooth out corners J.Aguirre-->
         <h1 class = "navbar">
-            <p class="navbuttons grow"><a href="github.com">Home</a></p>
-            <p class="grow"><a href="github.com">Workouts</a></p>
-            <p class="grow"><a href="github.com">Logout</a></p>
+            <p class="grow"><a href="/search">Workouts</a></p>
+            <p class="grow"><a href="/api/users/logout">Logout</a></p>
         </h1>
     </nav>
     <div id="master-container" class="master-container">
         {{!-- <h1>Welcome back {{First Name}}</h1> --}}
-        {{{Header}}}
+        <div class="header-container">
+            <h1>Welcome Back</h1>
+        </div>
+
+        {{{dashboard}}}
         <div class="top-row-master">
             <div id="top-1" class="top-row-container">
                 <p>Steps Placeholder</p>
