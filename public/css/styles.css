@@ -210,13 +210,21 @@ h3 {
     margin: 0 auto;
     width: 70%;
     height: 100%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+.social-container {
+    font-size: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: -2%;
 }
 
 .right-main {
     font-size: 20px;
     margin: 20px auto;
+    margin-top: 3%;
     height: 90%;
     width: 30%;
     max-width: 30%;
@@ -274,7 +282,7 @@ h3 {
 
 .socials {
     font-size: 20px;
-    margin: 20px auto;
+    margin: 5px auto;
     height: 90%;
     width: 100%;
 }
