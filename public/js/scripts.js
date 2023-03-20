@@ -53,6 +53,24 @@ function addMovement() {
     }
 };
 
+function addWorkout() {
+
+    console.log('click')
+
+    const name = document.querySelector('#user-list-title').value.trim();
+    const desc = document.querySelector('#user-list-desc').value.trim();
+    // const data = document.querySelector('#saved-movements').value.trim();
+    const container = document.getElementById('user-workouts');
+    const workoutDiv = document.createElement('div');
+
+    workoutDiv.classList.add('saved');
+    workoutDiv.textContent = `${name}: ${desc}`;
+    container.appendChild(workoutDiv);
+
+    document.querySelector('#user-list-title').value = '';
+    document.querySelector('#user-list-desc').value = '';
+};
+
 document.querySelector('#add-button').addEventListener('click', addMovement);
 
-
+document.querySelector('#submit-button').addEventListener('click', addWorkout);
