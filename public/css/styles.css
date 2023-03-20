@@ -36,10 +36,11 @@ body {
 .navbar {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: -3%;
 }
-.navbuttons{
+/* .navbuttons{
 
-}
+} */
 a:link {
     color: white;
     text-decoration: none;
