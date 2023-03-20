@@ -7,35 +7,25 @@ const fetchData = () => {
     .then (response => response.json())
     .then (response => {
 
+        const container = document.getElementById('user-workouts');
+        
+        container.innerHTML = '';
         sessionStorage.setItem('userId', response.userId)
-
+        
         responseWorkouts = response.workouts.forEach(workout => {
 
             if (workout.user_id === response.userId) {
 
-                workoutArr.push(workout)
-            } else if (workout.user_id === null) {
-
-                preMadeArray.push(workout)
-                console.log(preMadeArray);
-            }
-
-        });
-
-        const container = document.getElementById('user-workouts');
-        container.innerHTML = '';
-
-        workoutArr.forEach(workout => {
-                
-                // const workoutDiv = document.createElement('button');
                 const workoutDiv = document.createElement('div');
                 workoutDiv.classList.add('saved');
                 workoutDiv.textContent = workout.name;
 
                 container.appendChild(workoutDiv);
-        })
+            } else if (workout.user_id === null) {
 
-
+                preMadeArray.push(workout)
+            }
+        });
     }).catch (error => console.error(error));
 };
 
@@ -66,8 +56,6 @@ function addMovement() {
         document.querySelector('#workout-name').value = '';
         document.querySelector('#workout-sets').value = '';
         document.querySelector('#workout-reps').value = '';
-
-        console.log(movementArray)
     }
 };
 
@@ -173,7 +161,8 @@ async function addWorkout() {
                     movementArray = [];
                     document.querySelector('#user-list-title').value = '';
                     document.querySelector('#user-list-desc').value = '';
-                    // document.getElementById('user-workouts').innerHTML = '';
+                    document.querySelector('#saved-movements').innerHTML = '';
+                    document.getElementById('user-workouts').innerHTML = '';
                     fetchData();
                 }
             })

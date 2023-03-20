@@ -9,7 +9,7 @@
     <title>Flex Appeal</title>
     <meta name="description" content="A simple web application to maximize your workout planning">
 
-    <link rel="stylesheet" href="../../public/css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../dashboard.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -56,12 +56,19 @@
                 <p>User-entered workout list</p>
             </div>
             <div id="bottom-2" class="bottom-row-container charts">
-                <p>charts n' shit</p>
+                <h3> Choose your Type of Completed Workout</h2>
+                <select id="myDropdown">
+                    <option value="option1">Push</option>
+                    <option value="option2">Pull</option>
+                    <option value="option3">Legs</option>
+                </select>
+                <div class="chart-container" style="position: center ; height:40vh; width:50vw">
+                <canvas id="myChart"></canvas>
             </div>
         </div>
     </div>
-
-    <script src="../../public/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="../dashboard.js"></script>
 </body>
 
 </html>
