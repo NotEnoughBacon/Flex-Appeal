@@ -1,8 +1,11 @@
-let movementArray;
+let movementArray = []
 
-fetch ('/api/workouts')
+const fetchData = () => {
+    fetch ('/api/workouts')
     .then (response => response.json())
     .then (response => {
+
+        sessionStorage.setItem('userId', response.userId)
 
         const workoutArr = []
 
@@ -15,6 +18,7 @@ fetch ('/api/workouts')
         });
 
         const container = document.getElementById('user-workouts');
+        container.innerHTML = '';
 
         workoutArr.forEach(workout => {
                 
@@ -24,14 +28,14 @@ fetch ('/api/workouts')
 
                 container.appendChild(workoutDiv);
         })
-    })
-.catch (error => console.error(error));
+
+
+    }).catch (error => console.error(error));
+};
 
 function addMovement() {
 
     console.log('click')
-
-    const movementArray = []
 
     const name = document.querySelector('#workout-name').value.trim();
     const sets = document.querySelector('#workout-sets').value.trim();
@@ -40,7 +44,13 @@ function addMovement() {
 
     if (name && sets && reps) {
 
+        const movementObj = {
+            name: name,
+            sets: sets,
+            reps: reps
+        };
 
+        movementArray.push(movementObj);
 
         const movementDiv = document.createElement('div');
         movementDiv.classList.add('saved');
@@ -50,27 +60,67 @@ function addMovement() {
         document.querySelector('#workout-name').value = '';
         document.querySelector('#workout-sets').value = '';
         document.querySelector('#workout-reps').value = '';
+
+        console.log(movementArray)
     }
 };
 
-function addWorkout() {
+async function addWorkout() {
 
-    console.log('click')
+    const workoutName = document.querySelector('#user-list-title').value.trim();
+    const workoutDesc = document.querySelector('#user-list-desc').value.trim();
 
-    const name = document.querySelector('#user-list-title').value.trim();
-    const desc = document.querySelector('#user-list-desc').value.trim();
-    // const data = document.querySelector('#saved-movements').value.trim();
-    const container = document.getElementById('user-workouts');
-    const workoutDiv = document.createElement('div');
+    if (workoutName && workoutDesc) {
 
-    workoutDiv.classList.add('saved');
-    workoutDiv.textContent = `${name}: ${desc}`;
-    container.appendChild(workoutDiv);
+        const workoutApi = await fetch ('/api/workouts', {
 
-    document.querySelector('#user-list-title').value = '';
-    document.querySelector('#user-list-desc').value = '';
+            method: 'POST',
+            body: JSON.stringify({
+                name: workoutName,
+                description: workoutDesc,
+                user_id: sessionStorage.getItem('userId')
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+
+        if (workoutApi.ok) {
+
+            const workoutData = await workoutApi.json();
+
+            const workoutId = workoutData.id;
+
+            movementArray.forEach(async movement => {
+
+                const movementApi = await fetch ('/api/movements', {
+
+                    method: 'POST',
+                    body: JSON.stringify({
+                        name: movement.name,
+                        sets: movement.sets,
+                        reps: movement.reps,
+                        workout_id: workoutId
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                });
+
+                if (movementApi.ok) {
+
+                    console.log('success')
+                    movementArray = [];
+                    document.querySelector('#user-list-title').value = '';
+                    document.querySelector('#user-list-desc').value = '';
+                    // document.getElementById('user-workouts').innerHTML = '';
+                    fetchData();
+                }
+            })
+        }
+    }
 };
 
 document.querySelector('#add-button').addEventListener('click', addMovement);
-
 document.querySelector('#submit-button').addEventListener('click', addWorkout);
+fetchData();
