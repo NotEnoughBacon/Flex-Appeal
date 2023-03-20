@@ -62,7 +62,7 @@ fetch ('/api/workouts')
     })
 .catch (error => console.error(error));
     
-var ctx = document.getElementById('bottom-2').getContext('2d');
+var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -99,9 +99,7 @@ function update () {
         dataset.data = dataset.data.map(() => randomScalingFactor());
     });
     myChart.update();
-} 
-
-
+} ;
 
 const clockElement = document.querySelector(".clock");
 const clockObject = new DigitalClock(clockElement);
