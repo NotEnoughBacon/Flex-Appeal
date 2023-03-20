@@ -19,24 +19,6 @@ const fetchData = () => {
 
             if (workout.user_id === response.userId) {
 
-<<<<<<< HEAD
-                workoutArr.push(workout)
-            } else if (workout.user_id === null) {
-
-                preMadeArray.push(workout)
-                console.log(preMadeArray);
-            }
-
-        });
-
-        const container = document.getElementById('user-workouts');
-        container.innerHTML = '';
-
-        workoutArr.forEach(workout => {
-                
-                // const workoutDivButton = document.createElement('button');
-=======
->>>>>>> 90f23f0a9ee0a6e0060d2830d1341b9ad644a72c
                 const workoutDiv = document.createElement('div');
                 workoutDiv.classList.add('saved');
                 workoutDiv.textContent = workout.name;
