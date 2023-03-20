@@ -2,6 +2,9 @@ let movementArray = []
 const preMadeArray = []
 const workoutArr = []
 
+// const workoutDivButton = document.createElement('button');
+// const workoutDiv = document.createElement('div');
+
 const fetchData = () => {
     fetch ('/api/workouts')
     .then (response => response.json())
@@ -177,14 +180,12 @@ async function addWorkout() {
 
 //     container.innerHTML= '';
 
-//     const resultDiv = document.createElement('div');
+//     workoutDivButton.classList.add('result');
 
-//     resultDiv.classList.add('result');
+//     // const result = workoutArr.find(currentItem);
 
-//     const result = workoutArr.find(currentItem);
-
-//     resultDiv.textContent = `Name: ${result.name} \n\n Sets: ${result.sets} \n Reps: ${result.reps}`;
-//     container.appendChild(resultDiv);
+//     workoutDivButton.textContent = `Name: ${result.name} \n\n Sets: ${result.sets} \n Reps: ${result.reps}`;
+//     container.appendChild(workoutDivButton);
 
 //     console.log(workoutArr);
 
