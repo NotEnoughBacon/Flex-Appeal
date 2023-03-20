@@ -1,5 +1,6 @@
 let movementArray = []
 const preMadeArray = []
+const workoutArr = []
 
 const fetchData = () => {
     fetch ('/api/workouts')
@@ -7,8 +8,6 @@ const fetchData = () => {
     .then (response => {
 
         sessionStorage.setItem('userId', response.userId)
-
-        const workoutArr = []
 
         responseWorkouts = response.workouts.forEach(workout => {
 
@@ -28,6 +27,7 @@ const fetchData = () => {
 
         workoutArr.forEach(workout => {
                 
+                // const workoutDiv = document.createElement('button');
                 const workoutDiv = document.createElement('div');
                 workoutDiv.classList.add('saved');
                 workoutDiv.textContent = workout.name;
@@ -108,7 +108,6 @@ function randomWorkout2() {
 }
 
 function randomWorkout3() {
-    document.querySelector('#user-results').value = '';
     console.log('click');
 
     const result3 = preMadeArray.find(obj => obj.id === 3);
@@ -182,11 +181,30 @@ async function addWorkout() {
     }
 };
 
+// function displayWorkout() {
+//     console.log('click');
+
+//     const container = document.getElementById('user-results');
+
+//     container.innerHTML= '';
+
+//     const resultDiv = document.createElement('div');
+
+//     resultDiv.classList.add('result');
+
+//     const result = workoutArr.find(currentItem);
+
+//     resultDiv.textContent = `Name: ${result.name} \n\n Sets: ${result.sets} \n Reps: ${result.reps}`;
+//     container.appendChild(resultDiv);
+
+//     console.log(workoutArr);
+
+// }
+
 document.querySelector('#add-button').addEventListener('click', addMovement);
 document.querySelector('#push-workout').addEventListener('click', randomWorkout1);
 document.querySelector('#pull-workout').addEventListener('click', randomWorkout2);
 document.querySelector('#leg-workout').addEventListener('click', randomWorkout3);
-document.querySelector('#add-button').addEventListener('click', addMovement);
 document.querySelector('#submit-button').addEventListener('click', addWorkout);
+// document.querySelector('.saved').addEventListener('click', displayWorkout);
 fetchData();
-

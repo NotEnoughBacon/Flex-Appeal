@@ -268,16 +268,11 @@ h3 {
 }
 
 .user-workouts {
-    /* background-color: whitesmoke; */
-    border-radius: 25px;
-    border-width: 1px;
-    box-shadow: 0px 5px 10px 0px black;
     font-size: 20px;
     margin: 20px auto;
     height: 90%;
     width: 85%;
     display: inline-block;
-    background: #eaeaea;
 }
 
 .socials {
@@ -290,6 +285,30 @@ h3 {
 .result {
     margin: 10%;
 }
+
+/* .saved {
+    border: solid;
+    border-width: 1px;
+    border-color: #6c757d;
+    background: #4785c2;
+    border-radius: 25px;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px 30px;
+    text-align: center;
+    cursor: pointer;
+    height: 80%;
+    width: 95%;
+    margin: 1%;
+    font-weight: lighter;
+}
+
+.saved:hover {
+    transform: scale(1.05);
+    transition: all .025s ease-in-out;
+} */
 
 .fa {
     padding: 20px;
