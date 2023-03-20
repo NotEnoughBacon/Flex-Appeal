@@ -8,10 +8,10 @@ const fetchData = () => {
     .then (response => {
 
         const container = document.getElementById('user-workouts');
+        
         container.innerHTML = '';
-
         sessionStorage.setItem('userId', response.userId)
-
+        
         responseWorkouts = response.workouts.forEach(workout => {
 
             if (workout.user_id === response.userId) {
@@ -96,7 +96,6 @@ function randomWorkout2() {
 }
 
 function randomWorkout3() {
-    document.querySelector('#user-results').value = '';
     console.log('click');
 
     const result3 = preMadeArray.find(obj => obj.id === 3);
@@ -171,10 +170,30 @@ async function addWorkout() {
     }
 };
 
+// function displayWorkout() {
+//     console.log('click');
+
+//     const container = document.getElementById('user-results');
+
+//     container.innerHTML= '';
+
+//     const resultDiv = document.createElement('div');
+
+//     resultDiv.classList.add('result');
+
+//     const result = workoutArr.find(currentItem);
+
+//     resultDiv.textContent = `Name: ${result.name} \n\n Sets: ${result.sets} \n Reps: ${result.reps}`;
+//     container.appendChild(resultDiv);
+
+//     console.log(workoutArr);
+
+// }
+
 document.querySelector('#add-button').addEventListener('click', addMovement);
 document.querySelector('#push-workout').addEventListener('click', randomWorkout1);
 document.querySelector('#pull-workout').addEventListener('click', randomWorkout2);
 document.querySelector('#leg-workout').addEventListener('click', randomWorkout3);
 document.querySelector('#submit-button').addEventListener('click', addWorkout);
+// document.querySelector('.saved').addEventListener('click', displayWorkout);
 fetchData();
-
