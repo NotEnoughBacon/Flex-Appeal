@@ -1,3 +1,5 @@
+let movementArray;
+
 fetch ('/api/workouts')
     .then (response => response.json())
     .then (response => {
@@ -29,12 +31,16 @@ function addMovement() {
 
     console.log('click')
 
+    const movementArray = []
+
     const name = document.querySelector('#workout-name').value.trim();
     const sets = document.querySelector('#workout-sets').value.trim();
     const reps = document.querySelector('#workout-reps').value.trim();
     const container = document.getElementById('saved-movements');
 
     if (name && sets && reps) {
+
+
 
         const movementDiv = document.createElement('div');
         movementDiv.classList.add('saved');
