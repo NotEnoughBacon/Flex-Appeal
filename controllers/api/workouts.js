@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
         const responseData = {
 
             userId: req.session.user_id,
-            workouts:workoutsData
+            workouts: workoutsData
         }
 
         res.status(200).json(responseData);

@@ -25,7 +25,7 @@ Movements.init(
         },
         description: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         sets: {
             type: DataTypes.INTEGER,
