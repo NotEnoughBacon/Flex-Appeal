@@ -47,8 +47,4 @@ function addMovement() {
     }
 };
 
-
-
 document.querySelector('#add-button').addEventListener('click', addMovement);
-
-
